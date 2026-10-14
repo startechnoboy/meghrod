@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Meghrod Homestay — a hillside retreat with cloud-kissed views, warm hospitality, and rooms that feel like home."
+    />
+    <title>Meghrod Homestay | Cloud-Kissed Stay in the Hills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              meadow: "#4D9B22",
+              sky: "#009CD5",
+              ocean: "#0065B3",
+              ink: "#0c1f2e",
+              mist: "#f4f8fb",
+            },
+            fontFamily: {
+              display: ["Cormorant Garamond", "Georgia", "serif"],
+              sans: ["Outfit", "system-ui", "sans-serif"],
+            },
+            maxWidth: {
+              page: "76rem",
+            },
+            boxShadow: {
+              lift: "0 24px 60px rgba(0, 101, 179, 0.14)",
+              glow: "0 16px 40px rgba(77, 155, 34, 0.28)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-mist font-sans text-ink antialiased">
+    <div class="page-glow pointer-events-none" aria-hidden="true"></div>
+    <div class="page-glow page-glow-left pointer-events-none" aria-hidden="true"></div>
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+    <header
+      class="site-header fixed inset-x-0 top-0 z-50 border-b border-ocean/10 bg-mist/80 backdrop-blur-xl"
+      id="top"
+    >
+      <div class="header-inner mx-auto flex w-full max-w-page items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <a class="flex min-w-0 items-center gap-3" href="#top" aria-label="Meghrod Homestay home">
+          <img
+            class="brand-logo h-12 w-auto max-w-[min(180px,58vw)] object-contain sm:h-16 sm:max-w-[220px]"
+            src="images/logo.png"
+            alt="Meghrod Homestay"
+          />
+        </a>
+
+        <nav class="site-nav" id="site-nav">
+          <a class="nav-link text-[0.95rem] font-medium" href="#about">About</a>
+          <a class="nav-link text-[0.95rem] font-medium" href="#reviews">Reviews</a>
+          <a class="nav-link text-[0.95rem] font-medium" href="#gallery">Gallery</a>
+          <a class="nav-link text-[0.95rem] font-medium" href="#places">Nearby places</a>
+          <a class="nav-link text-[0.95rem] font-medium" href="#visit">Visit us</a>
+          <a class="btn-gradient rounded-full px-5 py-3 text-sm font-semibold text-white shadow-lift" href="#booking">
+            Call to booking
+          </a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero relative grid place-items-end overflow-hidden text-white" aria-label="Welcome">
+        <div class="hero-media absolute inset-0">
+          <img
+            class="h-full w-full object-cover"
+            src="images/image-16.jpeg"
+            alt="Clouds filling the Kalimpong valley below Meghrod Homestay"
+          />
+          <div class="hero-veil absolute inset-0"></div>
+        </div>
+
+        <div class="hero-copy relative z-[2] mx-auto mb-4 w-full max-w-page px-4 pb-4 sm:mb-16 sm:px-6 sm:pb-8 lg:px-8">
+          <p class="eyebrow reveal text-white/90">Your little escape to the hills</p>
+          <h1 class="reveal delay-1 mb-4 font-display text-[clamp(2.15rem,8vw,5.4rem)] font-semibold leading-[1.08]">
+            Wake up to mist,<br />
+            <em class="hero-italic">stay like family.</em>
+          </h1>
+          <p class="hero-lead reveal delay-2 mb-6 max-w-xl text-[0.95rem] text-white/90 sm:mb-8 sm:text-lg">
+            A cozy stay at the lap of the hills — sunrise, serenity, and you. Timber rooms,
+            garden breakfasts, and valley light for travellers who want nature without losing comfort.
+          </p>
+          <div class="reveal delay-3 mb-6 flex flex-wrap gap-3 sm:mb-8">
+            <a class="btn-gradient rounded-full px-6 py-3.5 font-semibold text-white shadow-lift" href="#booking">Call to booking</a>
+            <a
+              class="rounded-full border border-white/35 bg-white/10 px-6 py-3.5 font-semibold backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+              href="#gallery"
+            >
+              View gallery
+            </a>
+          </div>
+          <dl class="hero-stats reveal delay-4">
+            <div>
+              <dt>Free</dt>
+              <dd>WiFi for guests</dd>
+            </div>
+            <div>
+              <dt>800 m</dt>
+              <dd>Delo Science City</dd>
+            </div>
+            <div>
+              <dt>4.9</dt>
+              <dd>Guest rating</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="scroll-hint absolute bottom-8 right-[6%] z-[2] hidden flex-col items-center gap-2 text-[0.65rem] uppercase tracking-[0.2em] md:flex" aria-hidden="true">
+          <span>Scroll</span>
+          <i></i>
+        </div>
+      </section>
+
+      <section class="marquee overflow-hidden py-3 text-white" aria-hidden="true">
+        <div class="marquee-track flex w-max gap-10 text-[0.82rem] font-medium uppercase tracking-[0.08em]">
+          <span>Breathtaking sunrises</span>
+          <span>Cozy &amp; comfortable stay</span>
+          <span>Peaceful surroundings</span>
+          <span>Close to nature</span>
+          <span>Free WiFi</span>
+          <span>800 m to Delo Science City</span>
+          <span>Breathtaking sunrises</span>
+          <span>Cozy &amp; comfortable stay</span>
+          <span>Peaceful surroundings</span>
+          <span>Close to nature</span>
+          <span>Free WiFi</span>
+          <span>800 m to Delo Science City</span>
+        </div>
+      </section>
+
+      <section class="about py-14 md:py-24 lg:py-28" id="about">
+        <div class="mx-auto grid w-full max-w-page items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div class="min-w-0">
+            <p class="eyebrow reveal">About Meghrod</p>
+            <h2 class="reveal delay-1 mb-4 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold leading-tight">
+              A homestay shaped by weather, wood, and welcome.
+            </h2>
+            <p class="reveal delay-2 mb-4 text-slate-600">
+              Nestled on a ridge where monsoon clouds drift through the pines, Meghrod is a
+              family-run stay built for slow mornings and long evenings. Rooms open onto
+              gardens. Meals are cooked from the day’s harvest. Nothing here is rushed —
+              except perhaps the kettle.
+            </p>
+            <p class="reveal delay-3 mb-6 text-slate-600">
+              Whether you arrive for a weekend unplug or a week of trail walking, you are
+              hosted, not checked in. Unwind. Breathe. Belong.
+            </p>
+
+            <aside class="wifi-highlight reveal delay-3 mb-6" aria-label="Free WiFi">
+              <div class="wifi-orb" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                  <path d="M12 20h.01"></path>
+                  <path d="M2 8.82a16 16 0 0 1 20 0"></path>
+                </svg>
+              </div>
+              <div class="wifi-copy min-w-0">
+                <span class="wifi-kicker">Complimentary for every guest</span>
+                <strong>FREE WiFi</strong>
+                <p>Stay connected in rooms, gardens, and the deck — high-speed internet included with your stay.</p>
+              </div>
+              <span class="wifi-badge">Included</span>
+            </aside>
+
+            <ul class="about-points space-y-0">
+              <li class="reveal flex items-start gap-3 border-t border-ocean/10 py-3">
+                <span class="dot mt-2"></span>
+                Breathtaking sunrises over the Kalimpong hills
+              </li>
+              <li class="reveal delay-1 flex items-start gap-3 border-t border-ocean/10 py-3">
+                <span class="dot mt-2"></span>
+                Cozy &amp; comfortable rooms with valley-facing windows
+              </li>
+              <li class="reveal delay-2 flex items-start gap-3 border-t border-ocean/10 py-3">
+                <span class="dot mt-2"></span>
+                Peaceful surroundings, close to nature
+              </li>
+              <li class="reveal delay-3 flex items-start gap-3 border-t border-ocean/10 py-3">
+                <span class="dot mt-2"></span>
+                Only 800 m from Delo Science City
+              </li>
+            </ul>
+          </div>
+          <div class="about-collage grid min-h-[220px] grid-cols-1 gap-3 sm:min-h-[420px] sm:grid-cols-[1.2fr_0.8fr]">
+            <figure class="tile tile-lg float-slow m-0 overflow-hidden rounded-[22px] shadow-lift sm:row-span-2">
+              <img
+                class="h-full min-h-[180px] w-full object-cover sm:min-h-[420px]"
+                src="images/image-05.jpeg"
+                alt="Mountain ranges from Meghrod Homestay in Kalimpong"
+              />
+            </figure>
+            <figure class="tile tile-sm float-mid m-0 min-h-[160px] overflow-hidden rounded-[22px] shadow-lift">
+              <img
+                class="h-full w-full object-cover"
+                src="images/image-39.jpeg"
+                alt="Flower-lined stone facade of Meghrod Homestay"
+              />
+            </figure>
+            <figure class="tile tile-md float-fast m-0 min-h-[160px] overflow-hidden rounded-[22px] shadow-lift">
+              <img
+                class="h-full w-full object-cover"
+                src="images/image-13.jpeg"
+                alt="Garden room with floral bedding"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-14 md:py-24" aria-label="Stay highlights">
+        <div class="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 sm:mb-10">
+            <p class="eyebrow reveal">The stay</p>
+            <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Comforts that feel unhurried.</h2>
+          </header>
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="amenity-card reveal min-h-[200px] rounded-[20px] border border-ocean/10 bg-mist p-5 sm:p-6">
+              <div class="amenity-icon mb-4 grid h-12 w-12 place-items-center rounded-[14px]" aria-hidden="true">☀</div>
+              <h3 class="mb-2 font-display text-2xl">Breathtaking sunrises</h3>
+              <p class="text-slate-600">Open terraces where first light fills the valley and tea arrives warm.</p>
+            </article>
+            <article class="amenity-card reveal delay-1 min-h-[200px] rounded-[20px] border border-ocean/10 bg-mist p-5 sm:p-6">
+              <div class="amenity-icon mb-4 grid h-12 w-12 place-items-center rounded-[14px]" aria-hidden="true">🌿</div>
+              <h3 class="mb-2 font-display text-2xl">Close to nature</h3>
+              <p class="text-slate-600">Pines, gardens, and peaceful surroundings — a true hillside escape.</p>
+            </article>
+            <article class="amenity-card reveal delay-2 min-h-[200px] rounded-[20px] border border-ocean/10 bg-mist p-5 sm:p-6">
+              <div class="amenity-icon mb-4 grid h-12 w-12 place-items-center rounded-[14px]" aria-hidden="true">🔥</div>
+              <h3 class="mb-2 font-display text-2xl">Cozy &amp; comfortable</h3>
+              <p class="text-slate-600">Warm rooms, home cooking, and evenings by the fire once the clouds part.</p>
+            </article>
+            <article class="amenity-card wifi-amenity reveal delay-3 min-h-[200px] rounded-[20px] p-5 sm:p-6">
+              <div class="amenity-icon mb-4 grid h-12 w-12 place-items-center rounded-[14px]" aria-hidden="true">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                  <path d="M12 20h.01"></path>
+                  <path d="M2 8.82a16 16 0 0 1 20 0"></path>
+                </svg>
+              </div>
+              <h3 class="mb-2 font-display text-2xl">Free WiFi</h3>
+              <p class="text-slate-600">Complimentary high-speed internet throughout the homestay.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews py-14 md:py-24 lg:py-28" id="reviews">
+        <div class="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 sm:mb-10">
+            <p class="eyebrow reveal">Reviews</p>
+            <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Guests who stayed, then returned.</h2>
+          </header>
+          <div class="review-slider relative overflow-hidden" data-slider>
+            <article class="review-card is-active w-full max-w-3xl rounded-3xl bg-white p-5 shadow-lift sm:p-8">
+              <div class="stars mb-2 tracking-[0.2em] text-meadow" aria-label="5 stars">★★★★★</div>
+              <blockquote class="mb-6 font-display text-[clamp(1.2rem,4vw,1.9rem)] leading-snug">
+                “The mist arrived at breakfast like a guest of its own. Rooms were warm,
+                the family was kinder still, and we left slower than we came.”
+              </blockquote>
+              <footer class="flex flex-col text-slate-500">
+                <strong class="text-ink">Ananya R.</strong>
+                <span>Delhi · 3 nights</span>
+              </footer>
+            </article>
+            <article class="review-card w-full max-w-3xl rounded-3xl bg-white p-5 shadow-lift sm:p-8">
+              <div class="stars mb-2 tracking-[0.2em] text-meadow" aria-label="5 stars">★★★★★</div>
+              <blockquote class="mb-6 font-display text-[clamp(1.2rem,4vw,1.9rem)] leading-snug">
+                “Best homestay we have found in years. Clean linen, honest food, and a
+                viewpoint five minutes from the gate. Booking by phone was easy.”
+              </blockquote>
+              <footer class="flex flex-col text-slate-500">
+                <strong class="text-ink">James & Priya</strong>
+                <span>Bengaluru · 5 nights</span>
+              </footer>
+            </article>
+            <article class="review-card w-full max-w-3xl rounded-3xl bg-white p-5 shadow-lift sm:p-8">
+              <div class="stars mb-2 tracking-[0.2em] text-meadow" aria-label="5 stars">★★★★★</div>
+              <blockquote class="mb-6 font-display text-[clamp(1.2rem,4vw,1.9rem)] leading-snug">
+                “We brought our parents. They felt looked after. The garden, the fire,
+                the quiet — Meghrod is the kind of place you recommend in a whisper.”
+              </blockquote>
+              <footer class="flex flex-col text-slate-500">
+                <strong class="text-ink">S. Mehta</strong>
+                <span>Pune · family stay</span>
+              </footer>
+            </article>
+            <div class="slider-nav relative z-[2] mt-6 flex gap-2">
+              <button class="h-12 w-12 rounded-full border border-ocean/20 bg-white text-2xl transition hover:bg-ocean hover:text-white" type="button" data-prev aria-label="Previous review">‹</button>
+              <button class="h-12 w-12 rounded-full border border-ocean/20 bg-white text-2xl transition hover:bg-ocean hover:text-white" type="button" data-next aria-label="Next review">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery bg-white py-14 md:py-24 lg:py-28" id="gallery">
+        <div class="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 flex flex-col justify-between gap-4 sm:mb-10 md:flex-row md:items-end">
+            <div>
+              <p class="eyebrow reveal">Gallery</p>
+              <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Light, rooms, and the ridge.</h2>
+            </div>
+            <p class="reveal delay-2 max-w-xs text-slate-500">Tap any frame to open it larger.</p>
+          </header>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-16.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-16.jpeg" alt="Sea of clouds over the Kalimpong hills" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-03.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-03.jpeg" alt="Garden courtyard strung with fairy lights" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-09.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-09.jpeg" alt="Guest room with bed and sitting corner" />
+            </button>
+            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-13.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-13.jpeg" alt="Yellow-walled garden room" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-39.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-39.jpeg" alt="Stone homestay facade with potted flowers" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-18.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-18.jpeg" alt="Evening clouds drifting across the valley" />
+            </button>
+            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-11.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-11.jpeg" alt="Window-side room with wooden bench seating" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-01.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-01.jpeg" alt="Garden table and chairs under fairy lights" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-43.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-43.jpeg" alt="Garden gate and potted plants at the entrance" />
+            </button>
+            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-35.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-35.jpeg" alt="Double room with pink curtains and sitting nook" />
+            </button>
+            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-05.jpeg">
+              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-05.jpeg" alt="Blue-sky mountain view from the terrace" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="places py-14 md:py-24 lg:py-28" id="places">
+        <div class="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 sm:mb-12">
+            <p class="eyebrow reveal">Explore Kalimpong</p>
+            <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Nearby visiting places</h2>
+            <p class="reveal delay-2 mt-3 max-w-2xl text-slate-600">
+              Day trails from Meghrod — half-day loops around Delo, a full Kalimpong circuit, and an offbeat run to Lava, Lolegaon, Rishop, and Pedong.
+            </p>
+          </header>
+
+          <article class="places-journey reveal mb-8 sm:mb-10">
+            <div class="places-journey-head">
+              <span class="places-badge">Half day</span>
+              <p>Delo Park → Science Centre → Dr. Graham’s Homes → Mangal Dham → Icche Gaon</p>
+            </div>
+            <div class="places-track">
+              <figure class="place-card">
+                <img src="images/delo-02.jpg" alt="Delo Park, Kalimpong" />
+                <figcaption>
+                  <span>01</span>
+                  <strong>Delo Park</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/science-01.jpg" alt="Science Centre near Delo" />
+                <figcaption>
+                  <span>02</span>
+                  <strong>Science Centre</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/home-01.jpg" alt="Dr. Graham’s Homes area" />
+                <figcaption>
+                  <span>03</span>
+                  <strong>Dr. Graham’s Homes</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/mangal-01.jpg" alt="Mangal Dham temple" />
+                <figcaption>
+                  <span>04</span>
+                  <strong>Mangal Dham</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/image-05.jpeg" alt="Hills on the way to Icche Gaon" />
+                <figcaption>
+                  <span>05</span>
+                  <strong>Icche Gaon</strong>
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="places-journey reveal delay-1 mb-8 sm:mb-10">
+            <div class="places-journey-head">
+              <span class="places-badge places-badge-sky">Full day</span>
+              <p>Pine View Cactus Nursery → Durpin Dara → Kalimpong Town → Sillery Gaon → Monastery</p>
+            </div>
+            <div class="places-track">
+              <figure class="place-card">
+                <img src="images/pine-01.jpg" alt="Pine View Cactus Nursery" />
+                <figcaption>
+                  <span>01</span>
+                  <strong>Pine View Cactus Nursery</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/dara-01.jpg" alt="Durpin Dara viewpoint" />
+                <figcaption>
+                  <span>02</span>
+                  <strong>Durpin Dara</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/town.jpg" alt="Kalimpong town" />
+                <figcaption>
+                  <span>03</span>
+                  <strong>Kalimpong Town</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/gaon.jpg" alt="Sillery Gaon village cottages" />
+                <figcaption>
+                  <span>04</span>
+                  <strong>Sillery Gaon</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card">
+                <img src="images/monestary.jpg" alt="Monastery visit in Kalimpong" />
+                <figcaption>
+                  <span>05</span>
+                  <strong>Monastery visit</strong>
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="places-journey reveal delay-2">
+            <div class="places-journey-head">
+              <span class="places-badge places-badge-deep">Offbeat full day</span>
+              <p>Lava → Lolegaon → Rishop → Pedong</p>
+            </div>
+            <div class="places-track">
+              <figure class="place-card place-card-wide">
+                <img src="images/lava.jpg" alt="Lava, Kalimpong" />
+                <figcaption>
+                  <span>01</span>
+                  <strong>Lava</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card place-card-wide">
+                <img src="images/lolegaon.jpg" alt="Lolegaon" />
+                <figcaption>
+                  <span>02</span>
+                  <strong>Lolegaon</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card place-card-wide">
+                <img src="images/rishop.jpg" alt="Rishop" />
+                <figcaption>
+                  <span>03</span>
+                  <strong>Rishop</strong>
+                </figcaption>
+              </figure>
+              <figure class="place-card place-card-wide">
+                <img src="images/pedong.jpg" alt="Pedong" />
+                <figcaption>
+                  <span>04</span>
+                  <strong>Pedong</strong>
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="visit py-14 md:py-24 lg:py-28" id="visit">
+        <div class="mx-auto grid w-full max-w-page items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div class="min-w-0">
+            <p class="eyebrow reveal">Visit us</p>
+            <h2 class="reveal delay-1 mb-4 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold leading-tight">
+              Find the ridge. Follow the pines.
+            </h2>
+            <p class="reveal delay-2 mb-6 text-slate-600">
+              Meghrod Homestay is in Kalimpong, near Dr. Graham’s Homes and only 800 m from
+              Delo Science City. We can arrange pickup from the nearest bus stand or taxi point.
+            </p>
+            <ul class="visit-list">
+              <li class="reveal border-t border-ocean/10 py-4">
+                <strong class="mb-1 block text-xs uppercase tracking-[0.08em] text-ocean">Address</strong>
+                <span class="break-words">Dr. Grahams Homes, Block-B, Near Manger Board, Delo Road, Kalimpong, West Bengal 734316</span>
+              </li>
+              <li class="reveal delay-1 border-t border-ocean/10 py-4">
+                <strong class="mb-1 block text-xs uppercase tracking-[0.08em] text-ocean">Phone</strong>
+                <div class="grid gap-1">
+                  <a class="hover:text-sky" href="tel:+916290758639">Sukhen Bhowmick · +91 62907 58639</a>
+                  <a class="hover:text-sky" href="tel:+919007935540">Soumen Bhowmick · +91 90079 35540</a>
+                </div>
+              </li>
+              <li class="reveal delay-2 border-t border-ocean/10 py-4">
+                <strong class="mb-1 block text-xs uppercase tracking-[0.08em] text-ocean">Email</strong>
+                <a class="break-all hover:text-sky" href="mailto:meghrod.homestay@gmail.com">meghrod.homestay@gmail.com</a>
+              </li>
+              <li class="reveal delay-3 border-t border-ocean/10 py-4">
+                <strong class="mb-1 block text-xs uppercase tracking-[0.08em] text-ocean">Nearby</strong>
+                Delo Science City · 800 m
+              </li>
+              <li class="reveal delay-3 border-t border-ocean/10 py-4">
+                <strong class="mb-1 block text-xs uppercase tracking-[0.08em] text-ocean">Check-in</strong>
+                From 1:00 PM · Check-out 11:00 AM
+              </li>
+            </ul>
+          </div>
+          <div class="map-frame reveal delay-2 min-h-[260px] overflow-hidden rounded-[22px] shadow-lift sm:min-h-[340px]">
+            <iframe
+              class="h-full min-h-[260px] w-full border-0 sm:min-h-[340px]"
+              title="Map of Meghrod Homestay, Kalimpong"
+              src="https://maps.google.com/maps?q=Dr+Grahams+Homes+Block+B,+Delo+Road,+Kalimpong+734316&amp;z=16&amp;output=embed"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking relative overflow-hidden py-14 text-white md:py-24 lg:py-28" id="booking">
+        <div class="booking-bg absolute inset-0" aria-hidden="true"></div>
+        <div class="relative z-[1] mx-auto grid w-full max-w-page items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div class="min-w-0">
+            <p class="eyebrow light reveal">Call to booking</p>
+            <h2 class="reveal delay-1 mb-4 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold leading-tight">
+              Reserve your dates. We will take care of the rest.
+            </h2>
+            <p class="reveal delay-2 mb-6 text-white/85">
+              Speak with the family directly. We confirm rooms, meals, and pickup on the
+              same call — no waiting for an inbox.
+            </p>
+            <div class="mb-4 flex flex-col gap-3">
+              <a class="phone-pill reveal delay-3 inline-flex min-w-0 flex-col rounded-[18px] border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-md" href="tel:+916290758639">
+                <span class="text-xs uppercase tracking-[0.16em] text-white/80">Sukhen Bhowmick</span>
+                <strong class="text-lg sm:text-xl">+91 62907 58639</strong>
+              </a>
+              <a class="phone-pill reveal delay-3 inline-flex min-w-0 flex-col rounded-[18px] border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-md" href="tel:+919007935540">
+                <span class="text-xs uppercase tracking-[0.16em] text-white/80">Soumen Bhowmick</span>
+                <strong class="text-lg sm:text-xl">+91 90079 35540</strong>
+              </a>
+            </div>
+            <a class="reveal delay-3 inline-flex break-all text-white/90 underline decoration-white/40 underline-offset-4 hover:text-white" href="mailto:meghrod.homestay@gmail.com">
+              meghrod.homestay@gmail.com
+            </a>
+          </div>
+          <form class="booking-form reveal delay-2 grid gap-3 rounded-3xl bg-white/95 p-5 text-ink shadow-lift sm:p-6" id="booking-form">
+            <label class="grid gap-1 text-sm font-semibold">
+              Full name
+              <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label class="grid gap-1 text-sm font-semibold">
+              Phone
+              <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="tel" name="phone" required placeholder="Mobile number" />
+            </label>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <label class="grid min-w-0 gap-1 text-sm font-semibold">
+                Arrival
+                <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="arrival" required />
+              </label>
+              <label class="grid min-w-0 gap-1 text-sm font-semibold">
+                Departure
+                <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="departure" required />
+              </label>
+            </div>
+            <label class="grid gap-1 text-sm font-semibold">
+              Guests
+              <select class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" name="guests" required>
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5+ guests</option>
+              </select>
+            </label>
+            <button class="btn-gradient mt-1 w-full rounded-full py-3.5 font-semibold text-white shadow-lift" type="submit">Request a callback</button>
+            <p class="form-note m-0 text-sm font-normal text-slate-500">We typically reply within a few hours during the day.</p>
+            <p class="form-success m-0 hidden text-sm font-normal text-meadow">Thank you. We will call you shortly to confirm your stay.</p>
+            <p class="form-error m-0 hidden text-sm font-normal text-red-600">Could not send just now. Please call +91 62907 58639 or email meghrod.homestay@gmail.com.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="mx-auto grid w-full max-w-page gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.7fr_1.1fr] lg:gap-12 lg:px-8 lg:py-16">
+        <div class="min-w-0">
+          <img class="mb-4 h-14 w-auto max-w-[200px] object-contain sm:h-16" src="images/logo.png" alt="Meghrod Homestay" />
+          <p class="footer-tagline">Your little escape to the hills.</p>
+          <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/70">
+            A cozy stay at the lap of the hills. Sunrise. Serenity. You. Unwind. Breathe. Belong.
+          </p>
+        </div>
+
+        <nav class="footer-nav min-w-0" aria-label="Footer">
+          <h3>Explore</h3>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#places">Nearby places</a>
+          <a href="#visit">Visit us</a>
+          <a href="#booking">Call to booking</a>
+        </nav>
+
+        <div class="footer-contact min-w-0">
+          <h3>Contact</h3>
+          <a class="footer-item" href="https://maps.google.com/?q=Dr+Grahams+Homes+Block+B,+Delo+Road,+Kalimpong+734316" target="_blank" rel="noopener">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path>
+                <circle cx="12" cy="10" r="2.4"></circle>
+              </svg>
+            </span>
+            <span>Dr. Grahams Homes, Block-B, Near Manger Board, Delo Road, Kalimpong, West Bengal 734316</span>
+          </a>
+          <a class="footer-item" href="mailto:meghrod.homestay@gmail.com">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+            <span class="break-all">meghrod.homestay@gmail.com</span>
+          </a>
+          <a class="footer-item" href="tel:+916290758639">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"></path>
+              </svg>
+            </span>
+            <span>Sukhen Bhowmick · +91 62907 58639</span>
+          </a>
+          <a class="footer-item" href="tel:+919007935540">
+            <span class="footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"></path>
+              </svg>
+            </span>
+            <span>Soumen Bhowmick · +91 90079 35540</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="mx-auto flex w-full max-w-page flex-col gap-2 px-4 py-4 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>© <span id="year"></span> Meghrod Homestay. All rights reserved.</p>
+          <p>Kalimpong, West Bengal</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lightbox fixed inset-0 z-[80] hidden place-items-center bg-[#071824]/90 p-4 sm:p-6" id="lightbox">
+      <button class="lightbox-close absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-white text-3xl sm:right-4 sm:top-4 sm:h-12 sm:w-12" type="button" aria-label="Close image">×</button>
+      <img class="max-h-[80vh] max-w-full rounded-2xl object-contain" alt="" />
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
