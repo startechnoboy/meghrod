@@ -691,6 +691,13 @@ canvas {
   pointer-events: none;
 }
 
+.footer-logo {
+  display: block;
+  background: #f4f8fb;
+  border-radius: 16px;
+  padding: 0.45rem 0.7rem;
+}
+
 .footer-tagline {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.45rem;
@@ -705,6 +712,11 @@ canvas {
   align-content: start;
 }
 
+.footer-social {
+  margin-top: 1.35rem;
+}
+
+.footer-social h3,
 .footer-nav h3,
 .footer-contact h3 {
   margin: 0 0 0.35rem;
@@ -750,6 +762,32 @@ canvas {
   width: 18px;
   height: 18px;
   color: #fff;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 0.7rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus-visible {
+  color: #9fe7ff;
+}
+
+.footer-social-link .footer-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-bottom {
