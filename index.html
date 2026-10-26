@@ -217,7 +217,7 @@
                 alt="Mountain ranges from Meghrod Homestay in Kalimpong"
               />
             </figure>
-            <figure class="tile tile-sm float-mid m-0 min-h-[160px] overflow-hidden rounded-[22px] shadow-lift">
+            <!-- <figure class="tile tile-sm float-mid m-0 min-h-[160px] overflow-hidden rounded-[22px] shadow-lift">
               <img
                 class="h-full w-full object-cover"
                 src="images/image-39.jpeg"
@@ -225,12 +225,17 @@
               />
             </figure>
             <figure class="tile tile-md float-fast m-0 min-h-[160px] overflow-hidden rounded-[22px] shadow-lift">
-              <img
-                class="h-full w-full object-cover"
-                src="images/image-13.jpeg"
-                alt="Garden room with floral bedding"
-              />
-            </figure>
+              <video
+                class="about-video h-full min-h-[160px] w-full object-cover"
+                src="images/paraglide.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Paragliding over the Kalimpong hills near Meghrod Homestay"
+              ></video>
+            </figure> -->
           </div>
         </div>
       </section>
@@ -326,43 +331,82 @@
           <header class="mb-8 flex flex-col justify-between gap-4 sm:mb-10 md:flex-row md:items-end">
             <div>
               <p class="eyebrow reveal">Gallery</p>
-              <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Light, rooms, and the ridge.</h2>
+              <h2 class="reveal delay-1 font-display text-[clamp(1.85rem,6vw,3.4rem)] font-semibold">Rooms, guests, and the sky.</h2>
             </div>
-            <p class="reveal delay-2 max-w-xs text-slate-500">Tap any frame to open it larger.</p>
+            <p class="reveal delay-2 max-w-sm text-slate-500">A living look at Meghrod — tap any frame or the paraglide film to open it larger.</p>
           </header>
-          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-16.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-16.jpeg" alt="Sea of clouds over the Kalimpong hills" />
+          <div class="gallery-mosaic">
+            <button type="button" class="gallery-item gallery-feature reveal" data-video="images/paraglide.mp4">
+              <video class="gallery-media" src="images/paraglide.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              <span class="gallery-play" aria-hidden="true"></span>
+              <span class="gallery-caption">
+                <em>Film</em>
+                Paragliding above the ridge
+              </span>
             </button>
-            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-03.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-03.jpeg" alt="Garden courtyard strung with fairy lights" />
+            <button type="button" class="gallery-item gallery-tall reveal delay-1" data-full="images/rooms01.jpeg">
+              <img class="gallery-media" src="images/rooms01.jpeg" alt="Sunlit guest room at Meghrod Homestay" />
+              <span class="gallery-caption"><em>Stay</em> Garden-facing room</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-09.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-09.jpeg" alt="Guest room with bed and sitting corner" />
+            <button type="button" class="gallery-item gallery-tall reveal delay-2" data-full="images/rooms02.jpeg">
+              <img class="gallery-media" src="images/rooms02.jpeg" alt="Comfortable bedroom with hillside light" />
+              <span class="gallery-caption"><em>Stay</em> Quiet hillside room</span>
             </button>
-            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-13.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-13.jpeg" alt="Yellow-walled garden room" />
+            <button type="button" class="gallery-item gallery-wide reveal" data-full="images/happy_customers01.jpeg">
+              <img class="gallery-media" src="images/happy_customers01.jpeg" alt="Guests enjoying their stay at Meghrod Homestay" />
+              <span class="gallery-caption"><em>Guests</em> Slow mornings together</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-39.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-39.jpeg" alt="Stone homestay facade with potted flowers" />
+            <button type="button" class="gallery-item gallery-sq reveal delay-1" data-full="images/happy_cus02.jpeg">
+              <img class="gallery-media" src="images/happy_cus02.jpeg" alt="Happy guests at Meghrod Homestay" />
+              <span class="gallery-caption"><em>Guests</em> Family welcome</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-18.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-18.jpeg" alt="Evening clouds drifting across the valley" />
+            <button type="button" class="gallery-item gallery-sq reveal delay-2" data-full="images/happy_cus03.jpeg">
+              <img class="gallery-media" src="images/happy_cus03.jpeg" alt="Smiling guests at the homestay" />
+              <span class="gallery-caption"><em>Guests</em> Memories on the ridge</span>
             </button>
-            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-11.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-11.jpeg" alt="Window-side room with wooden bench seating" />
+            <button type="button" class="gallery-item gallery-wide reveal" data-full="images/image-16.jpeg">
+              <img class="gallery-media" src="images/image-16.jpeg" alt="Sea of clouds over the Kalimpong hills" />
+              <span class="gallery-caption"><em>Views</em> Cloud-filled valley</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-01.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-01.jpeg" alt="Garden table and chairs under fairy lights" />
+            <button type="button" class="gallery-item gallery-sq reveal delay-1" data-full="images/image-03.jpeg">
+              <img class="gallery-media" src="images/image-03.jpeg" alt="Garden courtyard strung with fairy lights" />
+              <span class="gallery-caption"><em>Garden</em> Evening courtyard</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-2 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10 sm:col-span-2" data-full="images/image-43.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-43.jpeg" alt="Garden gate and potted plants at the entrance" />
+            <button type="button" class="gallery-item gallery-sq reveal delay-2" data-full="images/image-09.jpeg">
+              <img class="gallery-media" src="images/image-09.jpeg" alt="Guest room with bed and sitting corner" />
+              <span class="gallery-caption"><em>Stay</em> Sitting corner</span>
             </button>
-            <button type="button" class="gallery-item reveal min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-35.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-35.jpeg" alt="Double room with pink curtains and sitting nook" />
+            <button type="button" class="gallery-item gallery-sq reveal" data-full="images/image-13.jpeg">
+              <img class="gallery-media" src="images/image-13.jpeg" alt="Yellow-walled garden room" />
+              <span class="gallery-caption"><em>Stay</em> Garden room</span>
             </button>
-            <button type="button" class="gallery-item reveal delay-1 min-h-[200px] overflow-hidden rounded-[18px] bg-sky/10" data-full="images/image-05.jpeg">
-              <img class="h-full min-h-[200px] w-full object-cover" src="images/image-05.jpeg" alt="Blue-sky mountain view from the terrace" />
+            <button type="button" class="gallery-item gallery-wide reveal delay-1" data-full="images/image-39.jpeg">
+              <img class="gallery-media" src="images/image-39.jpeg" alt="Stone homestay facade with potted flowers" />
+              <span class="gallery-caption"><em>Home</em> Flowered facade</span>
+            </button>
+            <button type="button" class="gallery-item gallery-sq reveal delay-2" data-full="images/image-18.jpeg">
+              <img class="gallery-media" src="images/image-18.jpeg" alt="Evening clouds drifting across the valley" />
+              <span class="gallery-caption"><em>Views</em> Evening mist</span>
+            </button>
+            <button type="button" class="gallery-item gallery-sq reveal" data-full="images/image-11.jpeg">
+              <img class="gallery-media" src="images/image-11.jpeg" alt="Window-side room with wooden bench seating" />
+              <span class="gallery-caption"><em>Stay</em> Window nook</span>
+            </button>
+            <button type="button" class="gallery-item gallery-sq reveal delay-1" data-full="images/image-01.jpeg">
+              <img class="gallery-media" src="images/image-01.jpeg" alt="Garden table and chairs under fairy lights" />
+              <span class="gallery-caption"><em>Garden</em> Lights at dusk</span>
+            </button>
+            <button type="button" class="gallery-item gallery-wide reveal delay-2" data-full="images/image-43.jpeg">
+              <img class="gallery-media" src="images/image-43.jpeg" alt="Garden gate and potted plants at the entrance" />
+              <span class="gallery-caption"><em>Home</em> Garden gate</span>
+            </button>
+            <button type="button" class="gallery-item gallery-sq reveal" data-full="images/image-35.jpeg">
+              <img class="gallery-media" src="images/image-35.jpeg" alt="Double room with pink curtains and sitting nook" />
+              <span class="gallery-caption"><em>Stay</em> Soft afternoon light</span>
+            </button>
+            <button type="button" class="gallery-item gallery-sq reveal delay-1" data-full="images/image-05.jpeg">
+              <img class="gallery-media" src="images/image-05.jpeg" alt="Blue-sky mountain view from the terrace" />
+              <span class="gallery-caption"><em>Views</em> Terrace mountains</span>
             </button>
           </div>
         </div>
@@ -588,14 +632,14 @@
               Phone
               <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="tel" name="phone" required placeholder="Mobile number" />
             </label>
-            <div class="grid gap-3 sm:grid-cols-2">
+            <div class="date-fields">
               <label class="grid min-w-0 gap-1 text-sm font-semibold">
                 Arrival
-                <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="arrival" required />
+                <input class="date-input w-full rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="arrival" required />
               </label>
               <label class="grid min-w-0 gap-1 text-sm font-semibold">
                 Departure
-                <input class="w-full min-w-0 rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="departure" required />
+                <input class="date-input w-full rounded-xl border border-ocean/20 bg-[#f7fbfe] px-3 py-3 font-normal outline-none focus:border-transparent focus:ring-2 focus:ring-sky" type="date" name="departure" required />
               </label>
             </div>
             <label class="grid gap-1 text-sm font-semibold">
@@ -720,8 +764,9 @@
     </footer>
 
     <div class="lightbox fixed inset-0 z-[80] hidden place-items-center bg-[#071824]/90 p-4 sm:p-6" id="lightbox">
-      <button class="lightbox-close absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-white text-3xl sm:right-4 sm:top-4 sm:h-12 sm:w-12" type="button" aria-label="Close image">×</button>
-      <img class="max-h-[80vh] max-w-full rounded-2xl object-contain" alt="" />
+      <button class="lightbox-close absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-white text-3xl sm:right-4 sm:top-4 sm:h-12 sm:w-12" type="button" aria-label="Close">×</button>
+      <img class="lightbox-image max-h-[80vh] max-w-full rounded-2xl object-contain" alt="" />
+      <video class="lightbox-video hidden max-h-[80vh] w-full max-w-4xl rounded-2xl bg-black" controls playsinline></video>
     </div>
 
     <script src="js/main.js"></script>

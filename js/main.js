@@ -5,7 +5,8 @@ const backdrop = document.getElementById("nav-backdrop");
 const year = document.getElementById("year");
 const form = document.getElementById("booking-form");
 const lightbox = document.getElementById("lightbox");
-const lightboxImg = lightbox.querySelector("img");
+const lightboxImg = lightbox.querySelector(".lightbox-image");
+const lightboxVideo = lightbox.querySelector(".lightbox-video");
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -58,9 +59,29 @@ setInterval(() => {
 }, 7000);
 
 document.querySelectorAll(".gallery-item").forEach((button) => {
+  const previewVideo = button.querySelector("video");
+  if (previewVideo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    previewVideo.muted = true;
+    previewVideo.playsInline = true;
+    previewVideo.play().catch(() => {});
+  }
+
   button.addEventListener("click", () => {
-    lightboxImg.src = button.dataset.full;
-    lightboxImg.alt = button.querySelector("img").alt;
+    const videoSrc = button.dataset.video;
+    if (videoSrc) {
+      lightboxImg.classList.add("hidden");
+      lightboxImg.removeAttribute("src");
+      lightboxVideo.classList.remove("hidden");
+      lightboxVideo.src = videoSrc;
+      lightboxVideo.play().catch(() => {});
+    } else {
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute("src");
+      lightboxVideo.classList.add("hidden");
+      lightboxImg.classList.remove("hidden");
+      lightboxImg.src = button.dataset.full;
+      lightboxImg.alt = button.querySelector("img")?.alt || "";
+    }
     lightbox.classList.add("is-open");
     lightbox.classList.remove("hidden");
   });
@@ -70,6 +91,10 @@ function closeLightbox() {
   lightbox.classList.remove("is-open");
   lightbox.classList.add("hidden");
   lightboxImg.src = "";
+  lightboxVideo.pause();
+  lightboxVideo.removeAttribute("src");
+  lightboxVideo.classList.add("hidden");
+  lightboxImg.classList.remove("hidden");
 }
 
 lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
@@ -128,6 +153,16 @@ form.addEventListener("submit", async (event) => {
     submitBtn.disabled = false;
     submitBtn.textContent = "Request a callback";
   }
+});
+
+document.querySelectorAll(".about-video").forEach((video) => {
+  video.muted = true;
+  video.playsInline = true;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.pause();
+    return;
+  }
+  video.play().catch(() => {});
 });
 
 const revealEls = document.querySelectorAll(".reveal");
