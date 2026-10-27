@@ -7,6 +7,8 @@
 
 html {
   scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html,
@@ -603,16 +605,21 @@ canvas {
   overflow: hidden;
 }
 
-.date-input,
-.booking-form input[type="date"] {
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
   display: block;
   width: 100%;
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
+  font-size: 16px;
+}
+
+.date-input,
+.booking-form input[type="date"] {
   appearance: none;
   -webkit-appearance: none;
-  font-size: 16px;
 }
 
 .booking-form input[type="date"]::-webkit-datetime-edit,
